@@ -21,11 +21,11 @@ import com.android.calendar.Utils;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.mokee.util.Lunar;
-import android.mokee.util.LunarFestival;
-import android.mokee.util.MoKeeUtils;
-import android.mokee.util.SolarHoliDay;
-import android.mokee.util.SolarTerm;
+import android.kylin.util.Lunar;
+import android.kylin.util.LunarFestival;
+import android.kylin.util.KyLinUtils;
+import android.kylin.util.SolarHoliDay;
+import android.kylin.util.SolarTerm;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.text.format.DateUtils;
@@ -426,7 +426,7 @@ class CalendarAppWidgetModel {
         }
         //Show lunar in DayInfo for Chinese language
         String lunarstr = "";
-        if (MoKeeUtils.isChineseLanguage()) {
+        if (KyLinUtils.isChineseLanguage()) {
             List<String> list = new ArrayList<String>();
             Calendar cal = Calendar.getInstance();
             String date = Utils.formatDateRange(mContext, millis, millis, DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR);
